@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Because it is the slowest when it is reversed, and as quick as the sort3 otherwise, so it describe exactly a bubble sort, as quick as the selection one excepte if reversed
+
+sort2 uses: Merge Sort
+
+How do you know?: It is the fastest when it is not sorted and the bigger the sample, it dosen't affect his efficency a lot
+
+sort3 uses: Selection Sort
+
+How do you know?: Because it is way faster than sort 1 in reversed.

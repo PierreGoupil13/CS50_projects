@@ -1,0 +1,30 @@
+
+.imagesite{
+    height: auto;
+    width: 100%;
+}
+
+.rapCards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.presP{
+    text-align: center;
+}
+
+.siteP{
+    min-height: 100vh;
+    margin: 0;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+.navPedro{
+    min-height:50px;
+  }
+
+.fooPedro{
+    min-height:50px;
+  }

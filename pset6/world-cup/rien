@@ -1,0 +1,7 @@
+for i in range(N) :
+        gagnant = simulate_tournament(teams)
+        if gagnant in counts :
+            counts[gagnant] += 1
+        else :
+            counts.append(f"{gagnant}")
+            counts[gagnant] += 1

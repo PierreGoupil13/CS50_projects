@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+                // First part : make the button change color onclick
+            function colorChange(element, color){
+                // Change the background color of the button
+                element.style.backgroundColor = color;
+                if(color == 'red')
+                {
+                    // Select the div of part 1
+                    const answ = document.querySelector(".colorQuest");
+
+                    // Create a 'p' element that will display Incorrect if clicked
+                    const inco = document.createElement("p");
+                    const incoText = document.createTextNode("Incorrect");
+
+                    // Append the two pieces together
+                    inco.appendChild(incoText);
+
+                    // Append it to the div
+                    answ.appendChild(inco);
+                }
+                else if(color == 'green')
+                {
+                    const answ = document.querySelector(".colorQuest");
+
+                    // Create a 'p' element that will display Correct if clicked
+                    const co = document.createElement("p");
+                    const coText = document.createTextNode("Correct!");
+
+                    // Append the two pieces together
+                    co.appendChild(coText);
+
+                    // Append it to the div
+                    answ.appendChild(co);
+                }
+            }
+
+            function isRight(){
+
+                var answer = document.getElementById("answer").value.toLowerCase();
+
+                if(answer == 'jonathan')
+                {
+                    document.getElementById("answer").style.backgroundColor = 'green';
+                    const answ = document.querySelector(".colorQuest2");
+
+                    // Create a 'p' element that will display Correct if clicked
+                    const co = document.createElement("p");
+                    const coText = document.createTextNode("Correct!");
+
+                    // Append the two pieces together
+                    co.appendChild(coText);
+
+                    // Append it to the div
+                    answ.appendChild(co);
+                }
+                else
+                {
+                    document.getElementById("answer").style.backgroundColor = 'red';
+                    const answ = document.querySelector(".colorQuest2");
+
+                    // Create a 'p' element that will display Correct if clicked
+                    const co = document.createElement("p");
+                    const coText = document.createTextNode("Incorrect");
+
+                    // Append the two pieces together
+                    co.appendChild(coText);
+
+                    // Append it to the div
+                    answ.appendChild(co);
+                }
+
+                console.log(answer);
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Combien font 2 + 2 ?</h3>
+                <div class="colorQuest">
+                    <button onclick="colorChange(this,'red')">3</button>
+                    <button onclick="colorChange(this,'green')">4</button>
+                    <button onclick="colorChange(this,'red')">8</button>
+                </div>
+                <!-- TODO: Add multiple choice question here -->
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Qu'est-ce qui est jaune et qui attend ?</h3>
+                <div class="colorQuest2">
+                    <input id="answer">
+                    <button onclick="isRight()">Submit</button>
+                </div>
+
+
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+</html>
